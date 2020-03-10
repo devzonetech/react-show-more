@@ -26,11 +26,6 @@ class ShowMoreText extends Component {
         keepNewLines: PropTypes.bool
     };
 
-    constructor(props) {
-        super(props)
-        this.truncateRef = React.createRef()
-    } 
-
     componentDidMount() {
         var _self = this;
         this.setState({
@@ -48,7 +43,7 @@ class ShowMoreText extends Component {
             this.setState({
                 truncated
             });
-            if (truncated) this.truncateRef.current.onResize()
+            if (truncated) this.truncateRef.onResize()
         }
     };
 
@@ -98,7 +93,7 @@ class ShowMoreText extends Component {
                         </span>
                     }
                     onTruncate={this.handleTruncate}
-                    ref={this.truncateRef}
+                    ref={ref => (this.truncateRef = ref)}
                 >
                     {keepNewLines ?
                         children.split('\n').map((line, i, arr) => {
