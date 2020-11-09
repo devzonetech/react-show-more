@@ -92,7 +92,12 @@ class ShowMoreText extends Component {
             keepNewLines
         } = this.props;
 
-        const { expanded, truncated } = this.state;
+        const { truncated } = this.state;
+
+        const expanded =
+          typeof this.props.expanded === 'boolean'
+            ? this.props.expanded
+            : this.state.expanded;
 
         return (
             <div className={className}>
