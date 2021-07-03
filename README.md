@@ -38,6 +38,7 @@ class Foo extends Component {
                 onClick={this.executeOnClick}
                 expanded={false}
                 width={280}
+                truncatedEndingComponent={"... "}
             >
                 Lorem ipsum dolor sit amet, consectetur <a href="https://www.yahoo.com/" target="_blank" rel="noopener noreferrer">yahoo.com</a> adipiscing elit, sed do eiusmod tempor incididunt 
                 <a href="https://www.google.bg/" title="Google" rel="nofollow" target="_blank" rel="noopener noreferrer">www.google.bg</a> ut labore et dolore magna amet, consectetur adipiscing elit, 

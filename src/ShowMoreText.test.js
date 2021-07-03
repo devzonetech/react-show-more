@@ -30,7 +30,8 @@ describe('Component ShowMoreText', () => {
             onClick: undefined,
             expanded: false,
             width: 0,
-            keepNewLines: false
+            keepNewLines: false,
+            truncatedEndingComponent: '... ',
         });
     });
 
